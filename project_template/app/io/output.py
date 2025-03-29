@@ -1,24 +1,23 @@
-def output_text_to_console():
+def output_text_to_console(text):
     """
     Outputs text to the console.
 
-    This function should print or display text in the terminal.
-    It is currently a stub and requires further implementation.
+    Prints the provided text to the terminal.
 
-    Returns:
-        None
+    Args:
+        text (str): The text to be output.
     """
-    pass
+    print(text)
 
 
-def write_to_file_builtin():
+def write_to_file_builtin(text):
     """
-    Writes data to a file using Python's built-in file handling methods.
+    Writes data to a file using Python's built-in file handling.
 
-    This function should open a file in write mode and write the provided data
-    to it. It is a stub function and does not yet implement any functionality.
+    Writes the provided text to the file 'output.txt'.
 
-    Returns:
-        None
+    Args:
+        text (str): The text to be written to the file.
     """
-    pass
+    with open("output.txt", "w", encoding="utf-8") as file:
+        file.write(text)

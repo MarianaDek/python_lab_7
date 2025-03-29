@@ -1,37 +1,47 @@
+import pandas as pd
+
 def input_text_from_console():
     """
     Reads text input from the console.
 
-    This function is intended to capture user input via the terminal.
-    Currently, it is a stub and does not implement any functionality.
+    Prompts the user to enter text and returns the entered string.
 
     Returns:
-        None
+        str: The text entered by the user.
     """
-    pass
+    return input("Please enter some text: ")
 
 
 def read_from_file_builtin():
     """
-    Reads data from a file using Python's built-in file handling methods.
+    Reads data from a file using Python's built-in file handling.
 
-    This function should open a file, read its contents, and return the data.
-    It is a stub function and requires implementation.
+    Opens the file 'input_builtin.txt', reads its content, and returns it.
+    If the file does not exist, returns an error message.
 
     Returns:
-        None
+        str: The content of the file or an error message.
     """
-    pass
+    try:
+        with open("input_builtin.txt", "r", encoding="utf-8") as file:
+            return file.read()
+    except FileNotFoundError:
+        return "File 'input_builtin.txt' not found."
 
 
 def read_from_file_pandas():
     """
     Reads data from a file using the pandas library.
 
-    This function is designed to leverage pandas (e.g., using pandas.read_csv)
-    for reading file data into a DataFrame. It is currently a stub.
+    Reads the CSV file 'input_pandas.csv' into a DataFrame and returns its string representation.
+    If the file does not exist, returns an error message.
 
     Returns:
-        None
+        str: The DataFrame content as a string or an error message.
     """
-    pass
+    try:
+        df = pd.read_csv("input_pandas.csv")
+        return df.to_string()
+    except FileNotFoundError:
+        return "File 'input_pandas.csv' not found."
+
