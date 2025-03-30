@@ -1,0 +1,36 @@
+# Python specific
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.db
+*.sqlite
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# MacOS
+.DS_Store
+
+# Logs
+*.log
+
+# Testing
+.coverage
+nosetests.xml
+coverage.xml
+*.hypothesis/
+
+# Python package metadata
+*.egg-info/
+.eggs/
+dist/
+build/
