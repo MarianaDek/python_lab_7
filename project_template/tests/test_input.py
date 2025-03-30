@@ -3,8 +3,6 @@ import pandas as pd
 import pytest
 from project_template.app.io.input import read_from_file_builtin, read_from_file_pandas
 
-
-
 # Automatically change to the temporary directory for each test.
 @pytest.fixture(autouse=True)
 def change_dir(tmp_path, monkeypatch):
